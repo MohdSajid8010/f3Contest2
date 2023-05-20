@@ -64,31 +64,20 @@ function append_data_curr_location(obj) {
 
 
 
-
-    // console.log( name_of_timezone ,
-    //  city,
-    //  country ,
-    //  latt,
-    //  long ,
-    //  postcode ,
-    //  offset_STD,offset_STD_seconds,offset_DST,
-
-    //  offset_DST_seconds,)
-
     childcontainer1El.innerHTML = "";
     childcontainer1El.innerHTML += `<div class="inside_cont1">
-    <div>Name Of Time Zone :${name_of_timezone}</div>
+    <div>Name Of Time Zone :<strong>${name_of_timezone}</strong></div>
     <div class="lat-log">
-        <div>Lat:${latt}</div>
-        <div>Long:${long}</div>
+        <div>Lat:<strong>${latt}</strong></div>
+        <div>Long:<strong>${long}</strong></div>
     </div>
-    <div>Offset STD:${offset_STD}</div>
-    <div>Offset STD Seconds : ${offset_STD_seconds}</div>
-    <div>Offset DST : ${offset_DST}</div>
-    <div>Offset DST Seconds: ${offset_DST_seconds}</div>
-    <div>Country:   ${country}</div>
-    <div>Postcode:   ${postcode}</div>
-    <div>City:   ${city}</div>
+    <div>Offset STD:<strong>${offset_STD}</strong></div>
+    <div>Offset STD Seconds :<strong> ${offset_STD_seconds}</strong></div>
+    <div>Offset DST : <strong>${offset_DST}</strong></div>
+    <div>Offset DST Seconds: <strong>${offset_DST_seconds}</strong></div>
+    <div>Country:  <strong> ${country}</strong></div>
+    <div>Postcode:  <strong> ${postcode}</strong></div>
+    <div>City:  <strong> ${city}</strong></div>
 
    </div>`;
 
@@ -113,6 +102,10 @@ document.getElementById("submitBtn").addEventListener("click", () => {
     searchStr = searchStr.toLowerCase();
     if (!searchStr) {//empty string
         errEl.style.display = "block";
+        setTimeout(()=>{
+        errEl.style.display = "none";
+
+        },4000)
         container2El.style.display = "none";
         return;
     }
@@ -190,32 +183,32 @@ if(!city)
 }
 
 
-    console.log(name_of_timezone,
-        city,
-        country,
-        latt,
-        long,
-        postcode,
-        offset_STD, offset_STD_seconds, offset_DST,
-        offset_DST_seconds)
+    // console.log(name_of_timezone,
+    //     city,
+    //     country,
+    //     latt,
+    //     long,
+    //     postcode,
+    //     offset_STD, offset_STD_seconds, offset_DST,
+    //     offset_DST_seconds)
 
 
 
     childcontainer2El.innerHTML += `<div class="inside_cont2">
-            <div>Name Of Time Zone :${name_of_timezone}</div>
+            <div>Name Of Time Zone : <strong>${name_of_timezone}</strong></div>
             <div class="lat-log">
-                <div>Lat:${latt}</div>
-                <div>Long:${long}</div>
+                <div>Lat:<strong>${latt}</strong></div>
+                <div>Long:<strong>${long}</strong></div>
             </div>
-            <div>Offset STD:  ${offset_STD}
+            <div>Offset STD:  <strong>${offset_STD}</strong>
             </div>
-            <div>Offset STD Seconds :  ${offset_STD_seconds}</div>
-            <div>Offset DST :  ${offset_DST}
+            <div>Offset STD Seconds :  <strong>${offset_STD_seconds}</strong></div>
+            <div>Offset DST :  <strong>${offset_DST}</strong>
             </div>
-            <div>Offset DST Seconds:  ${offset_DST_seconds}</div>
-            <div>Country:  ${country}</div>
-            <div>Postcode:  ${postcode}</div>
-            <div>City:  ${city}</div>
+            <div>Offset DST Seconds:  <strong>${offset_DST_seconds}</strong></div>
+            <div>Country:  <strong>${country}</strong></div>
+            <div>Postcode: <strong> ${postcode}</strong></div>
+            <div>City: <strong> ${city}</strong></div>
            </div>`
 
 

@@ -100,6 +100,7 @@ grid-template-columns: 1fr 1fr;
 .err-container,.err-city{
     color: red;
     display: none;
+    margin-bottom: 20px;
 }
 .inside-black-cont{
     /* border: 2px dashed red; */
@@ -112,6 +113,33 @@ grid-template-columns: 1fr 1fr;
     min-height: 600px;
     padding-top: 10px;
 }
+
+
+
+@media (max-width:800px)
+{
+    .big-container {
+        width: 80vw;
+    
+    }
+    .inside-black-cont{
+        width: 80vw;
+        margin: auto;
+    }
+
+
+button[type="button"] {
+    width: 25%;
+    padding: 6px;
+}
+
+}
+.inside_cont2{
+    color: rgb(205, 201, 201);
+}
+.inside_cont2 strong{
+    color: rgb(241, 236, 236);
+}
 @media (max-width:400px)
 {
     .big-container {
@@ -119,7 +147,6 @@ grid-template-columns: 1fr 1fr;
     
     }
     .inside-black-cont{
-        /* border: 2px dashed red; */
         width: 90vw;
         margin: auto;
     }
